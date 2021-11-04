@@ -1,0 +1,60 @@
+//main: ../style.less
+
+#feedback-slider {
+    width: 550px;
+}
+.feedback {
+    margin-bottom: 145px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.feedback__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.feedback__content {
+    display: flex;
+}
+.feedback__autor {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.16;
+    color: @black;
+}
+.feedback__text {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feedback__quote__text {
+    width: 325px;
+    margin: 46px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.06rem;
+    line-height: 1.5;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 11px;
+        height: 10px;
+        background-image: url('./../images/quote1.png');
+        top: 3px;
+        left: -20px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 11px;
+        height: 10px;
+        background-image: url('./../images/quote2.png');
+        bottom: 0;
+        right: 45px;
+    }
+}

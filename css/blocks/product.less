@@ -1,0 +1,101 @@
+//main: ../style.less
+
+.product {
+    padding: 137px 0 112px;
+}
+.product__title {
+    margin-bottom: 65px;
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 600;
+    font-size: 2.94rem;
+    line-height: 1.38;
+    text-align: center;
+}
+.product__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+.product__link {
+    margin-left: 40px;
+    // padding: 0 20px;
+    display: inline-block;
+    position: relative;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: @black;
+    opacity: 0.6;
+
+    &:after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background-color: @red;
+
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        z-index: 1;
+        transition: width 0.2s linear;
+    }
+
+    &.active,
+    &:hover {
+        opacity: 1;
+        &:after {
+            width: 100%;
+        }
+    }
+}
+.product__link:first-child {
+    margin-left: 0;
+}
+.product__item {
+    display: flex;
+    justify-content: space-between;
+}
+.product__content {
+    width: 455px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.product__content:nth-child(1) {
+    align-items: flex-end;
+}
+
+.product__content__title {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1.73rem;
+    font-weight: 600;
+    line-height: 1.38;
+    color: @black;
+}
+.product__content__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.06rem;
+    line-height: 1.5;
+    color: @black;
+    opacity: 0.7;
+}
+.product__price {
+    margin-bottom: 15px;
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1.73rem;
+    font-weight: 500;
+    line-height: 1.38;
+    color: @black;
+}
+.product__price > del {
+    margin-left: 5px;
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1.33rem;
+    line-height: 1.4;
+    color: @black;
+    opacity: 0.7;
+}

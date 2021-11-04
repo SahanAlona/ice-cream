@@ -1,0 +1,59 @@
+//main: ../style.less
+
+.delivery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 100px 0;
+}
+
+.delivery__item {
+    width: 250px;
+    height: 200px;
+    padding: 25px 10px 10px;
+    margin: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    border: 1px solid fade(@black, 3%);
+    background: #ffffff;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.03);
+    border-radius: 7px;
+}
+
+.delivery__item:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('./../images/css_sprites.png') -530px -10px;
+}
+.delivery__item:nth-child(2):before {
+    background-position: -290px -10px;
+}
+.delivery__item:nth-child(3):before {
+    background-position: -397px -10px;
+}
+.delivery__item:nth-child(4):before {
+    background-position: -602px -10px;
+}
+
+.delivery__title {
+    margin-top: 70px;
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 600;
+    font-size: 1.33rem;
+    line-height: 1.4;
+    color: @black;
+}
+
+.delivery__text {
+    margin: 10px 0;
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 0.93rem;
+    color: fade(@black, 60%);
+}

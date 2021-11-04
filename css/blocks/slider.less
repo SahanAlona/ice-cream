@@ -1,0 +1,62 @@
+//main: ../style.less
+.slick-arrow {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    border: 0;
+    background-color: @white;
+    color: transparent;
+    position: absolute;
+    border: solid fade(@red, 50%);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+
+    &.slick-prev {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        bottom: -30px;
+        left: 5px;
+    }
+
+    &.slick-next {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        bottom: -30px;
+        right: 290px;
+    }
+}
+.slick-arrow:hover {
+    border: solid @red;
+    border-width: 0 3px 3px 0;
+}
+.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 0;
+    bottom: -40px;
+    right: 330px;
+    z-index: 2;
+
+    & button {
+        font-size: 0;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: url('./../images/women35.png');
+        border: none;
+        z-index: 10;
+    }
+
+    & li {
+        margin: 0 13px;
+        padding: 0;
+        list-style: none;
+        &.slick-active {
+            border-radius: 50%;
+            border: 1px solid @red;
+        }
+    }
+}
